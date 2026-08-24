@@ -24,3 +24,47 @@ input {
 button {
   cursor: pointer;
 }
+body {
+  zoom: 0.7;
+}
+
+/* index.css */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Left & Right spacing reduce */
+.max-w-7xl,
+.max-w-6xl,
+.max-w-5xl,
+.max-w-4xl {
+  width: 90%;
+  max-width: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Tailwind px-6 / px-4 ko compact karo */
+.px-6 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.px-4 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}

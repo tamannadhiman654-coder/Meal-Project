@@ -51,7 +51,7 @@ export default function Rr() {
             <h2 className="text-xl font-semibold mb-5">
               🌎 Choose your favorite cuisine
             </h2>
-
+email
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
 
               {[

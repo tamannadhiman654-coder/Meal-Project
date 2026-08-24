@@ -6,31 +6,31 @@ export default function Home() {
 
   const meals = [
     {
-      name: "Creamy Pasta",
-      category: "Italian",
+      name: "Fast-Food",
+      category: "Crunchy-Bites",
       time: "20 min",
       emoji: "🍝",
     },
     {
-      name: "Chicken Burger",
-      category: "Fast Food",
+      name: "Bevrages",
+      category: "Juicy-Sip",
       time: "15 min",
-      emoji: "🍔",
+      emoji: "🍹",
     },
     {
-      name: "Butter Chicken",
-      category: "Indian",
-      time: "30 min",
-      emoji: "🍗",
+      name: "Sweets",
+      category: "Sweet-Mouth",
+      time: "20 min",
+      emoji: "🍰",
     },
   ];
 
   const categories = [
-    ["🍛", "Indian"],
-    ["🍝", "Italian"],
-    ["🍜", "Asian"],
-    ["🌮", "Mexican"],
-    ["🥗", "Healthy"],
+    ["🍛", "Indian",to="/indian"],
+    ["🍝", "Italian",to="/italian"],
+    ["🍜", "Asian",to="/asian"],
+    ["🌮", "Mexican",to="/mexican"],
+    ["🥗", "Korean",to="/korean"],
   ];
 
   return (
@@ -63,7 +63,7 @@ export default function Home() {
 
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+            <h1 className="text-5xl md:text-email7xl font-bold leading-tight">
               Good Food.
               <br />
 
@@ -219,30 +219,25 @@ export default function Home() {
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
 
-          {categories.map(([icon, name]) => (
+         {categories.map(([icon, name, path]) => (
+  <Link to={path} key={name}>
+    <div
+      className="bg-gray-900 border border-gray-800
+                 hover:border-orange-500
+                 rounded-2xl p-6 text-center
+                 cursor-pointer transition duration-300
+                 group"
+    >
+      <div className="text-4xl group-hover:scale-110 transition">
+        {icon}
+      </div>
 
-            <div
-              key={name}
-              className="bg-gray-900 border border-gray-800
-                         hover:border-orange-500
-                         rounded-2xl p-6 text-center
-                         cursor-pointer transition duration-300
-                         group"
-            >
-
-              <div className="text-4xl group-hover:scale-110
-                              transition">
-                {icon}
-              </div>
-
-              <h3 className="mt-3 font-medium">
-                {name}
-              </h3>
-
-            </div>
-
-          ))}
-
+      <h3 className="mt-3 font-medium">
+        {name}
+      </h3>
+    </div>
+  </Link>
+))}
         </div>
 
       </section>
@@ -313,13 +308,11 @@ export default function Home() {
                     ★★★★★
                   </span>
 
-                  <button
-                    className="text-orange-500
-                               hover:text-orange-400
-                               font-medium text-sm"
-                  >
-                    View Recipe →
-                  </button>
+               <button
+  className="text-orange-500 hover:text-orange-400 font-bold !text-2xl"
+>
+  View More →
+</button>
 
                 </div>
 

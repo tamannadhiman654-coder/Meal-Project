@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function MealPlan() {
   const navigate = useNavigate();
@@ -79,14 +79,16 @@ export default function MealPlan() {
           </div>
 
           {/* Change Preferences */}
+          <Link to="/prefrence">
           <button
             onClick={() => navigate("/get-started")}
             className="border border-gray-700 hover:border-orange-500
-                       hover:text-orange-500 px-5 py-3 rounded-lg
-                       transition"
-          >
+            hover:text-orange-500 px-5 py-3 rounded-lg
+            transition"
+            >
             ⚙️ Change Preferences
           </button>
+            </Link>
 
         </div>
 

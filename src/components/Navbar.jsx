@@ -20,12 +20,12 @@ export default function Navbar() {
 
           {/* Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a
+            <Link to ="/Home"
               href="#"
               className="text-orange-500 font-medium"
             >
               Home
-            </a>
+            </Link>
 
             <a
               href="#"
