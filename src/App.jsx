@@ -12,6 +12,10 @@ import Indian from "./components/Food/Indian";
 import Italian from "./components/Food/Italian";
 import Korean from  "./components/Food/Korean";
 import Mexican from "./components/Food/Mexican";
+import Fast from "./components/Food2/Fast";
+import Bevrages from "./components/Food2/Bevrages";
+import Sweets from "./components/Food2/Sweets";
+
 import Swiper from "./components/Swiper";
 
 export default function App() {
@@ -28,7 +32,10 @@ export default function App() {
             
               <Home />
               <Swiper />
-             
+{/*              
+              <Bevrages/>
+              <Sweets/>
+              */}
             </>
           }
         />
@@ -67,6 +74,12 @@ export default function App() {
         <Route path="/asian" element={<Asian/>}/>
         <Route path="/mexican" element={<Mexican/>}/>
         <Route path="/korean" element={<Korean/>}/>
+        <Route path="/Fast-Food" element={ <Fast/>}/>
+        <Route path="/Bevrages" element={ <Bevrages/>}/>
+        <Route path="/Sweets" element={ <Sweets/>}/>
+
+        
+
 
 
       </Routes>
