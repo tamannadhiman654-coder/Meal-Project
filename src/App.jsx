@@ -17,8 +17,13 @@ import Bevrages from "./components/Food2/Bevrages";
 import Sweets from "./components/Food2/Sweets";
 import Order from "./components/Order";
 import OrderConfirmed from "./components/Orderconfirmed";
+import Statistics from "./components/Statistics";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
+import Recipes1 from "./components/Recipes1";
 
 import Swiper from "./components/Swiper";
+
 
 export default function App() {
   return (
@@ -80,6 +85,8 @@ export default function App() {
         <Route path="/Sweets" element={ <Sweets/>}/>
         <Route path="/Fast" element={ <Order/>}/>
         <Route path="/Place order" element={ <OrderConfirmed/>}/>
+        <Route path="/Recipes" element={ <Recipes1/>}/>
+      
           {/* <Order/> */}
 
         
@@ -88,6 +95,11 @@ export default function App() {
 
       </Routes>
        {/* <OrderConfirmed/> */}
+          <Statistics/>
+          <CTA/>
+          {/* <Contact/> */}
+          <Footer/>
+          {/* <Recipes1 /> */}
 
     </BrowserRouter>
   );
