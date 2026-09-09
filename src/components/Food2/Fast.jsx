@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const fastFoodData = [
   {
@@ -466,6 +467,7 @@ export default function Fast() {
                     ₹{food.price}
                   </p>
                 </div>
+<Link to="/Fast">
 
                 <button
                   onClick={() => handleOrder(food)}
@@ -484,6 +486,7 @@ export default function Fast() {
                 >
                   Order Now
                 </button>
+</Link>
 
               </div>
 

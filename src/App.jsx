@@ -15,6 +15,8 @@ import Mexican from "./components/Food/Mexican";
 import Fast from "./components/Food2/Fast";
 import Bevrages from "./components/Food2/Bevrages";
 import Sweets from "./components/Food2/Sweets";
+import Order from "./components/Order";
+import OrderConfirmed from "./components/Orderconfirmed";
 
 import Swiper from "./components/Swiper";
 
@@ -23,7 +25,6 @@ export default function App() {
     <BrowserRouter>
 
       <Navbar />
-
       <Routes>
          <Route
           path="/Home"
@@ -48,25 +49,25 @@ export default function App() {
         <Route
           path="/Login"
           element={<JoinMealBox />}
-        />
+          />
 
         {/* Get Started */}
         <Route
           path="/get-started"
           element={<GetStarted />}
-        />
+          />
 
         {/* Preferences */}
         <Route
           path="/Plan"
           element={<Rr />}
-        />
+          />
 
         {/* Meal Plan */}
-        <Route
+        {/* <Route
           path="/MealPlan"
           element={<MealPlan />}
-        />
+          /> */}
         <Route path="/join" element={<GetStarted/>}/>
         <Route path="/prefrence" element={<Rr/>}/>
         <Route path="/indian" element={<Indian/>}/>
@@ -77,12 +78,16 @@ export default function App() {
         <Route path="/Fast-Food" element={ <Fast/>}/>
         <Route path="/Bevrages" element={ <Bevrages/>}/>
         <Route path="/Sweets" element={ <Sweets/>}/>
+        <Route path="/Fast" element={ <Order/>}/>
+        <Route path="/Place order" element={ <OrderConfirmed/>}/>
+          {/* <Order/> */}
 
         
 
 
 
       </Routes>
+       {/* <OrderConfirmed/> */}
 
     </BrowserRouter>
   );

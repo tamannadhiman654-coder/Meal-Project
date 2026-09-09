@@ -1,0 +1,120 @@
+
+.order-confirmed {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  /* Food background image */
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.78),
+      rgba(20, 20, 20, 0.88)
+    ),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Main Box */
+.confirmation-box {
+  width: 450px;
+  max-width: 90%;
+
+  padding: 45px 35px;
+
+  text-align: center;
+
+  background: #1c1c1c;
+
+  border: 1px solid #333;
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.8),
+    0 0 15px rgba(255, 102, 0, 0.12);
+}
+
+/* Tick Circle */
+.tick {
+  width: 95px;
+  height: 95px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: #ff6500;
+  color: white;
+
+  font-size: 58px;
+  font-weight: bold;
+
+  border: 5px solid #292929;
+
+  box-shadow:
+    0 0 0 4px #ff6500,
+    0 0 25px rgba(255, 101, 0, 0.35);
+}
+
+/* Congratulations */
+.confirmation-box h1 {
+  margin: 10px 0;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* Order Confirmed */
+.confirmation-box h2 {
+  margin: 12px 0 20px;
+
+  color: #ff6500;
+
+  font-size: 22px;
+}
+
+/* Paragraph */
+.confirmation-box p {
+  color: #bdbdbd;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+/* Button */
+.continue-btn {
+  padding: 13px 28px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ff6500;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.continue-btn:hover {
+  background: #ff7a1a;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(255, 101, 0, 0.3);
+}

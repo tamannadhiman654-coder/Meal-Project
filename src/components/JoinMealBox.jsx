@@ -3,10 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function JoinMealBox() {
   const navigate = useNavigate();
-
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+const [name, setName] = useState("");
+const [phone, setPhone] = useState("");
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +20,9 @@ export default function JoinMealBox() {
 
     // Lowercase Gmail validation
     const emailRegex = /^[a-z0-9._%+-]+@gmail\.com$/;
+    const PasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+
 
     if (!nameRegex.test(name)) {
       alert("It should be compulsory to write first letter of name in capital letter. Name....🚫");
@@ -34,6 +38,11 @@ export default function JoinMealBox() {
       alert("Please enter lowercase email.Gmail....🚫");
       return;
     }
+if (!PasswordRegex.test(password)) {
+  alert("Invalid Password....🚫");
+  return;
+}
+
 
     // Everything valid
     navigate("/get-started");
@@ -139,18 +148,59 @@ export default function JoinMealBox() {
               />
 
             </div>
+       <div className="mb-5">
+
+  <label className="block text-gray-300 text-sm mb-2">
+    Password
+  </label>
+
+  <div className="relative">
+
+    <input
+      type={showPassword ? "text" : "password"}
+      value={password}
+      onChange={(e) => {
+        const value = e.target.value;
+
+        if (/^[A-Za-z0-9@$!%*?&]*$/.test(value)) {
+          setPassword(value);
+        }
+      }}
+      placeholder="Password......"
+      className="w-full bg-black border border-gray-700
+                 rounded-lg px-4 py-3 pr-12 text-white
+                 placeholder-gray-600
+                 focus:outline-none focus:border-orange-500
+                 transition"
+    />
+
+    <button
+      type="button"
+      onClick={() => setShowPassword(!showPassword)}
+      className="absolute right-3 top-1/2
+                 -translate-y-1/2 text-gray-400
+                 hover:text-white"
+    >
+      {showPassword ? "🙈" : "👁️"}
+    </button>
+
+  </div>
+
+</div>
+
+
 
             {/* Submit */}
-            <Link to="/join">
+
             <button
               type="submit"
               className="w-full bg-orange-500 hover:bg-orange-600
               text-white font-semibold py-3.5 rounded-lg
               transition duration-200"
-              >
+            >
               Join MealBox →
             </button>
-              </Link>
+
 
           </form>
 

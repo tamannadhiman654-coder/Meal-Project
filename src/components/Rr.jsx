@@ -182,7 +182,7 @@ email
           </div>
 
           {/* Button */}
-         <Link to='/MealPlan'>
+         <Link to='/Home'>
           <button
             onClick={createMealPlan}
             className="w-full bg-orange-500 hover:bg-orange-600
